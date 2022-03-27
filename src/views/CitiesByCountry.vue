@@ -51,9 +51,9 @@ import CityCountryList from "@/components/CityCountryList.vue";
             .then((response) => response.json())
             .then((json) => {
               data.allCities =[];
-              let listCity = json._embedded.cities;
-              for(let i=0; i<listCity.length;i++){
-                data.allCities.push(listCity[i])
+              let listCities = json._embedded.cities;
+              for(let i=0; i<listCities.length;i++){
+                data.allCities.push(listCities[i])
               }
             })
             .catch((error) => alert(error));
